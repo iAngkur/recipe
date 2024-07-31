@@ -7,7 +7,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes; else norecipes">
+        <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes;">
             <div class="pull-left">
                 <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
                 <p class="list-group-item-text">{{ recipe.description }}</p>
@@ -20,9 +20,6 @@
                 style="max-height: 50px;">
             </span>
         </a>
-        <ng-template #norecipes>
-            <h3>No Recipes available</h3>
-        </ng-template>
         <app-recipe-item></app-recipe-item>
     </div>
 </div>
